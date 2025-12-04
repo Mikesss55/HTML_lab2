@@ -381,6 +381,201 @@ a:active {
   border-color: var(--accent-color);
 }
 
+/* --- Custom Form Styling --- */
+
+/* Contact Form Container */
+.contact-form {
+  border-radius: 12px;
+  border-top: 6px solid var(--accent-color);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface-color);
+  padding: 30px;
+}
+
+/* Form Labels */
+.contact-form label {
+  font-weight: 600;
+  color: var(--default-color);
+  margin-bottom: 8px;
+  display: block;
+  font-size: 0.95rem;
+}
+
+/* Form Inputs */
+.contact-form .form-control,
+.contact-form .form-range {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+  outline: none;
+}
+
+/* Form Range (Slider) Styling */
+.rating-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.contact-form .form-range {
+  flex: 1;
+  height: 6px;
+  padding: 0;
+  background: linear-gradient(90deg, rgba(46, 204, 113, 0.1) 0%, rgba(46, 204, 113, 0.2) 50%, rgba(46, 204, 113, 0.1) 100%);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.contact-form .form-range::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(46, 204, 113, 0.4);
+  transition: all 0.2s ease;
+}
+
+.contact-form .form-range::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.6);
+}
+
+.contact-form .form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(46, 204, 113, 0.4);
+  transition: all 0.2s ease;
+}
+
+.contact-form .form-range::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.6);
+}
+
+.rating-value {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+/* Submit Button */
+.btn-submit-custom {
+  border-radius: 4px;
+  padding: 12px 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--accent-color);
+  background: var(--accent-color);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-submit-custom:hover {
+  background: color-mix(in srgb, var(--accent-color), black 10%);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  transform: translate(2px, 2px);
+}
+
+.btn-submit-custom:active {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+
+/* Form Results Container */
+.form-results-container {
+  margin-top: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.05) 0%, rgba(46, 204, 113, 0.02) 100%);
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.1);
+  animation: slideInUp 0.5s ease-out;
+}
+
+.results-content p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: var(--default-color);
+  line-height: 1.6;
+}
+
+.results-content p strong {
+  color: #0b2340;
+  font-weight: 700;
+}
+
+/* Success Notification Popup */
+.success-notification {
+  position: fixed;
+  bottom: -120px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, #27ae60 100%);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 1000;
+  transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  max-width: 400px;
+}
+
+.success-notification.show {
+  bottom: 30px;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.success-notification i {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.notification-content p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Media Queries */
 @media (max-width: 1199px) {
   .page-title { padding: 6px 0; }
