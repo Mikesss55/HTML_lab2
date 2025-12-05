@@ -134,35 +134,69 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
+                <!-- Name Field -->
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Your Name</label>
                   <input type="text" name="name" id="name-field" class="form-control" required="">
                 </div>
 
+                <!-- Surname Field -->
+                <div class="col-md-6">
+                  <label for="surname-field" class="pb-2">Your Surname</label>
+                  <input type="text" name="surname" id="surname-field" class="form-control" required="">
+                </div>
+
+                <!-- Email Field -->
                 <div class="col-md-6">
                   <label for="email-field" class="pb-2">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email-field" required="">
                 </div>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                <!-- Phone Field -->
+                <div class="col-md-6">
+                  <label for="phone-field" class="pb-2">Phone Number</label>
+                  <input type="tel" class="form-control" name="phone" id="phone-field" required="">
                 </div>
 
+                <!-- Address Field -->
                 <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                  <label for="address-field" class="pb-2">Address</label>
+                  <input type="text" class="form-control" name="address" id="address-field" required="">
                 </div>
 
+                <!-- Rating Question 1 -->
+                <div class="col-md-12">
+                  <label for="rating1-field" class="pb-2">How satisfied are you? (1-10)</label>
+                  <div class="rating-slider-wrapper">
+                    <input type="range" class="form-range" name="rating1" id="rating1-field" min="1" max="10" value="5" required="">
+                    <span class="rating-value" id="rating1-value">5</span>
+                  </div>
+                </div>
+
+                <!-- Rating Question 2 -->
+                <div class="col-md-12">
+                  <label for="rating2-field" class="pb-2">How likely to recommend? (1-10)</label>
+                  <div class="rating-slider-wrapper">
+                    <input type="range" class="form-range" name="rating2" id="rating2-field" min="1" max="10" value="5" required="">
+                    <span class="rating-value" id="rating2-value">5</span>
+                  </div>
+                </div>
+
+                <!-- Rating Question 3 -->
+                <div class="col-md-12">
+                  <label for="rating3-field" class="pb-2">Overall experience rating (1-10)</label>
+                  <div class="rating-slider-wrapper">
+                    <input type="range" class="form-range" name="rating3" id="rating3-field" min="1" max="10" value="5" required="">
+                    <span class="rating-value" id="rating3-value">5</span>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <button type="submit" class="btn-submit-custom">Submit</button>
                 </div>
 
               </div>
@@ -219,6 +253,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- Custom JS File -->
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
