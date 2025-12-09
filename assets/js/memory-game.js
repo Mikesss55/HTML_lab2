@@ -30,15 +30,15 @@ let gameState = {
   canFlip: true
 };
 
-// DOM Elements
-const gameBoard = document.getElementById('game-board');
-const difficultySelect = document.getElementById('difficulty');
-const startBtn = document.getElementById('start-btn');
-const restartBtn = document.getElementById('restart-btn');
-const movesCount = document.getElementById('moves-count');
-const matchesCount = document.getElementById('matches-count');
-const winMessage = document.getElementById('win-message');
-const finalMoves = document.getElementById('final-moves');
+// DOM Elements (will be initialized on DOMContentLoaded)
+let gameBoard;
+let difficultySelect;
+let startBtn;
+let restartBtn;
+let movesCount;
+let matchesCount;
+let winMessage;
+let finalMoves;
 
 // Initialize event listeners
 function initEventListeners() {
@@ -244,6 +244,17 @@ function restartGame() {
 
 // Initialize game on page load
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize DOM Elements
+  gameBoard = document.getElementById('game-board');
+  difficultySelect = document.getElementById('difficulty');
+  startBtn = document.getElementById('start-btn');
+  restartBtn = document.getElementById('restart-btn');
+  movesCount = document.getElementById('moves-count');
+  matchesCount = document.getElementById('matches-count');
+  winMessage = document.getElementById('win-message');
+  finalMoves = document.getElementById('final-moves');
+  
+  // Initialize event listeners
   initEventListeners();
   
   // Show initial empty state or placeholder
