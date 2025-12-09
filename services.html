@@ -26,6 +26,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/memory-game.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Kelly
@@ -72,6 +74,7 @@
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="#memory-game">Memory Game</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -200,6 +203,70 @@
 
     </section><!-- /Services Section -->
 
+    <!-- Memory Game Section -->
+    <section id="memory-game" class="memory-game section light-background">
+      
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Memory Game</h2>
+        <p>Test your memory skills with this fun flip card game!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        
+        <!-- Game Controls -->
+        <div class="game-controls text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="difficulty-selector mb-3">
+            <label for="difficulty" class="form-label fw-bold">Difficulty Level:</label>
+            <select id="difficulty" class="form-select d-inline-block w-auto mx-2">
+              <option value="easy">Easy (4×3)</option>
+              <option value="hard">Hard (6×4)</option>
+            </select>
+          </div>
+          
+          <div class="game-buttons">
+            <button id="start-btn" class="btn btn-success btn-lg mx-2">Start Game</button>
+            <button id="restart-btn" class="btn btn-warning btn-lg mx-2" disabled>Restart Game</button>
+          </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-6 mb-3">
+              <div class="stat-item">
+                <h4 class="stat-value" id="moves-count">0</h4>
+                <p class="stat-label">Moves</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+              <div class="stat-item">
+                <h4 class="stat-value" id="matches-count">0</h4>
+                <p class="stat-label">Matches</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-board-container" data-aos="fade-up" data-aos-delay="300">
+          <div id="game-board" class="game-board">
+            <!-- Cards will be generated here by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Win Message -->
+        <div id="win-message" class="win-message text-center mt-4" style="display: none;">
+          <div class="alert alert-success" role="alert">
+            <h3><i class="bi bi-trophy-fill"></i> Congratulations!</h3>
+            <p>You've matched all pairs in <span id="final-moves">0</span> moves!</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Memory Game Section -->
+
   </main>
 
   <footer id="footer" class="footer light-background">
@@ -244,6 +311,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/memory-game.js"></script>
 
 </body>
 
